@@ -3,13 +3,15 @@
 	align-items: center
 	justify-content: center
 	+relative()
-	height: 100vh
 	overflow: hidden
 	z-index: 1
 	font-size: 0
 
+	+max(sm)
+		padding-top: 130px
+
 	+min(md)
-		min-height: 600px
+		min-height: 100vh
 
 	&__part
 		+absolute(0)
@@ -44,9 +46,34 @@
 			z-index: 1
 			+min(sm)
 				top: -40px
-
+			
 	&__container
 		z-index: 4
+
+		+min(md)
+			margin-top: 220px
+
+	&__quote
+		+margin-y(45px, 60px)
+
+		line-height: 1.1
+		font-style: italic
+		+font('l')
+		color: $color-white
+		text-align: center
+		font-size: 16px
+
+		+min(sm)
+			font-size: 20px
+			+margin-y(60px, 120px)
+
+		+min(md)
+			margin-top: 90px
+			font-size: 22px
+
+		+min(lg)
+			margin-top: 100px
+			font-size: 24px
 
 	.header__title
 
