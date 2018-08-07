@@ -1,4 +1,9 @@
 <section class="section composition">
+	{% set j = 0 %}
+	{% for image in post.get_field('composition_bg') %}
+		{% set j = j + 1 %}
+		<img src="{{image.image}}" class="composition__bg composition__bg_{{j}}">
+	{% endfor %}
 	<div class="container">
 		{{siteMacros.titleSection( post.get_field('composition_title'), 'composition__title' )}}
 

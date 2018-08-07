@@ -1,5 +1,28 @@
 .composition
 
+	+relative()
+	overflow: hidden
+	z-index: 1
+
+	&__bg
+		+absolute()
+		z-index: -1
+		max-height: 200px
+
+		+min(sm)
+			max-height: 350px
+
+		+min(lg)
+			max-height: 400px
+
+		&_1
+			left: -10%
+			top: 37%
+
+		&_2
+			right: -10%
+			top: 0%
+
 	&__title
 		+min(sm)
 			margin-bottom: 60px
@@ -11,13 +34,13 @@
 			margin-bottom: 120px
 
 	&__item
-		+offset(45px)
 
 		&_1
 			margin-bottom: 90px
 
 		&_2
 			+min(sm)
+				margin-bottom: 150px
 				justify-content: flex-end
 
 		&-column
