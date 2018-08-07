@@ -2,7 +2,9 @@
 {% include 'html-header.twig' %}
 </head>
 <body class="{{body_class}}" data-template="base.twig">
-	{% include 'nav.twig' %}
+	{% block nav %}
+		{% include 'nav.twig' %}
+	{% endblock %}
 	<main class="site">
 
 		{% block content %}
