@@ -5,16 +5,6 @@
  */
 require get_template_directory() . '/tgm/connect.php';
 
-/**
- * Visual Composer Init
- */
-require get_template_directory() . '/visual_composer/visual_composer_init.php';
-
-/**
- * Shortcodes
- */
-require get_template_directory() . '/shortcodes.php';
-
 if ( ! class_exists( 'Timber' ) ) {
 	add_action( 'admin_notices', function() {
 		echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php') ) . '</a></p></div>';
@@ -28,34 +18,6 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 
 show_admin_bar(false);
-
-function custom_next_post($post_id){
-  $next_post = get_adjacent_post( true, '', true );
-  if (is_a($next_post, 'WP_Post')){
-  	$category = get_the_category( $next_post->ID );
-
-  	$echo = "<a href=" . get_permalink($next_post->ID) . " class='single-pagination__link single-pagination__link_next'>";
-  		$echo .= "<span class='single-pagination__link-category'>".esc_html( $category[0]->name )."</span>";
-  		$echo .= "<span class='single-pagination__link-name'>".get_the_title($next_post->ID)."</span>";
-    $echo .= "</a>";
-    echo $echo;
-  }
-}
-
-//custom prev post within taxonomy term
-function custom_prev_post($post_id){
-  $prev_post = get_adjacent_post( true, '', false );
-
-  if (is_a($prev_post, 'WP_Post')){
-  	$category = get_the_category( $prev_post->ID );
-
-  	$echo = "<a href=" . get_permalink($prev_post->ID) . " class='single-pagination__link single-pagination__link_prev'>";
-  		$echo .= "<span class='single-pagination__link-category'>".esc_html( $category[0]->name )."</span>";
-  		$echo .= "<span class='single-pagination__link-name'>".get_the_title($prev_post->ID)."</span>";
-    $echo .= "</a>";
-    echo $echo;
-  }
-}
 
 Timber::$dirname = array('templates', 'views');
 
