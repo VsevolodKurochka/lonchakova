@@ -1,0 +1,6 @@
+=blackout()
+	&:before
+		content: ""
+		+absolute(0, null, null, 0)
+		+size(100%)
+		background-color: transparentize($color-black, 0.5)

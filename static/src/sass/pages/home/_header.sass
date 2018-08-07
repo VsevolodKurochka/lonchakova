@@ -1,28 +1,25 @@
 .home-header
 	+relative()
 	height: 100vh
-	min-height: 600px
 	overflow: hidden
 	z-index: 1
-
 	font-size: 0
+
+	+min(md)
+		min-height: 600px
 
 	&__part
 		+absolute(0)
-		height: 100%
-		width: 45%
-
-		&:before
-			content: ""
-			+absolute(0, null, null, 0)
-			+size(100%)
-			background-color: transparentize($color-black, 0.5)
-			z-index: 1
+		+size(45%, 100%)
+		+blackout()
 
 		img
 			max-width: none
 			object-fit: cover
 			width: 100%
+
+			+max(sm)
+				height: 100%
 
 		&_1
 			left: 0
@@ -30,13 +27,17 @@
 			z-index: 3
 
 		&_2
-			top: -20px
+			top: -10px
 			left: 30%
 			clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%)
 			z-index: 2
+			+min(sm)
+				top: -20px
 
 		&_3
-			top: -40px
+			top: -20px
 			left: 60%
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%)
 			z-index: 1
+			+min(sm)
+				top: -40px
