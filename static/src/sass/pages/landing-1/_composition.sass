@@ -1,0 +1,73 @@
+.composition
+
+	&__title
+		+min(sm)
+			margin-bottom: 60px
+
+		+min(md)
+			margin-bottom: 90px
+
+		+min(lg)
+			margin-bottom: 120px
+
+	&__item
+		+offset(45px)
+
+		&_1
+			margin-bottom: 90px
+
+		&_2
+			+min(sm)
+				justify-content: flex-end
+
+		&-column
+			+relative()
+			z-index: 1
+
+		&-image
+			+absolute(50%)
+			z-index: -1
+			height: 100%
+			transform: translateY(-50%)
+			+min(sm)
+				height: 300px
+
+
+		&_1 &,
+		&_3 &
+			&-image
+				left: 0
+			&-body
+				+min(sm)
+					padding-left: 45px
+				+min(md)
+					padding-left: 90px
+				+min(lg)
+					padding-left: 200px
+
+		&_2 &
+			&-image
+				right: 0
+
+		&-title
+			margin-bottom: 15px
+
+			color: $color-brand-1
+			line-height: 1
+			text-transform: uppercase
+			font-size: 22px
+			+font('b')
+			
+			+min(sm)
+				font-size: 30px
+
+			+min(md)
+				margin-bottom: 20px
+				font-size: 32px
+
+			+min(lg)
+				font-size: 36px
+
+		&-content
+			+font('l')
+			line-height: 1.6

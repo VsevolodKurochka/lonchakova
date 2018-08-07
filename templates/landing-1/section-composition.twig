@@ -1,5 +1,23 @@
 <section class="section composition">
 	<div class="container">
 		{{siteMacros.titleSection( post.get_field('composition_title'), 'composition__title' )}}
+
+		<div class="composition__content">
+			{% set i = 0 %}
+			{% for step in post.get_field('composition_steps') %}
+				{% set i = i + 1 %}
+				<div class="row composition__item composition__item_{{i}}">
+					<div class="col-12 col-sm-8 col-md-6 composition__item-column">
+						{% if step.image %}
+							<img src="{{step.image}}" class="composition__item-image" alt="{{step.title}}">
+						{% endif %}
+						<div class="composition__item-body">
+							<p class="composition__item-title">{{step.title}}</p>
+							<div class="composition__item-content">{{step.content}}</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 </section>
