@@ -8,4 +8,13 @@
 	<div class="home-header__part home-header__part_3">
 		<img src="{{post.get_field('greeting_part_3')}}" alt="{{site.name}}">
 	</div>
+	<div class="home-header__container container">
+		{{
+			siteMacros.headerContent(
+				post.title,
+				post.get_field('greeting_subtitle'),
+				post.get_field('greeting_button_text')
+			)
+		}}
+	</div>
 </header>

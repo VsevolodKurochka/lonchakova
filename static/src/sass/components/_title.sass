@@ -16,12 +16,13 @@ $sizes: map-merge($sizes, $title-md)
 $sizes: map-merge($sizes, $title-lg)
 
 %title-default
-  margin-top: 10px
+  margin-top: 5px
   margin-bottom: 15px
   line-height: 1.1
   font-weight: normal
 
 +b('title')
+  @extend %title-default
   &-xs
     +fs("title-xs")
 
