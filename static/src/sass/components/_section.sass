@@ -1,12 +1,25 @@
 +b("section")
-  +margin-y(45px)
-  > .row
-  	+margin-x(0)
+	+margin-y(45px)
+	> .row
+		+margin-x(0)
 
-  &__title
-  	text-align: center
-  	margin-bottom: 30px
-  	+font('eb')
+	&__title
+		margin-bottom: 30px
 
-  	+min(sm)
-  		margin-bottom: 45px
+		font-size: 25px
+		text-align: center
+		text-transform: uppercase
+		font-weight: normal
+
+		+min(xs)
+			font-size: 28px
+
+		+min(sm)
+			font-size: 30px
+			margin-bottom: 45px
+
+		+min(md)
+			font-size: 32px	
+
+		+min(lg)
+			font-size: 36px
