@@ -1,6 +1,20 @@
 .header
 	+relative()
 	+blackout()
+	background-size: cover
+	+padding-y(60px)
+
+	+min(sm)
+		+padding-y(100px)
+
+	+min(md)
+		+padding-y(150px)
+
+	+min(lg)
+		+padding-y(200px)
+
+	+min(xlg)
+		+padding-y(250px)
 
 	&__content
 		text-align: center
@@ -17,17 +31,18 @@
 		margin-bottom: 30px
 
 		+min(xs)
-			font-size: 30px
+			font-size: 25px
 
 		+min(md)
-			font-size: 32px	
+			font-size: 28px	
 
 		+min(lg)
 			margin-bottom: 45px
-			font-size: 36px
+			font-size: 30px
 
 	&__title
 		@extend %title
+		margin-bottom: 15px
 		font-size: 30px
 
 		+min(sm)
@@ -37,5 +52,5 @@
 			font-size: 50px	
 
 		+min(lg)
-			margin-bottom: 0
-			font-size: 60px
+			margin-bottom: 5px
+			font-size: 65px
