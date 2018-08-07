@@ -1,0 +1,48 @@
+.review-type-1
+	margin-bottom: 30px
+
+	+min(md)
+		&:first-child
+			min-height: 700px
+
+	&__header
+		+relative()
+		font-size: 0
+		z-index: 1
+		margin-bottom: 30px
+
+		&:before
+			content: ""
+			+absolute(0, null, null, 0)
+			+size(100%)
+			background-color: transparentize($color-black, 0.4)
+
+		&-content
+			+absolute(null, null, 0, 0)
+			width: 100%
+			padding: 30px
+
+			&_center
+				text-align: center
+
+		&-title
+			color: $color-white
+			+font('eb')
+
+			font-size: 20px
+
+			+min(sm)
+				font-size: 24px
+
+			+min(lg)
+				font-size: 28px
+
+	&__content
+
+		p
+			+offset(15px)
+
+	&__btn
+		padding: 15px 30px
+		margin-top: 15px
+		min-width: 180px

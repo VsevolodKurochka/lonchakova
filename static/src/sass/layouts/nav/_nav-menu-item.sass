@@ -1,0 +1,40 @@
++b('nav')
+	+e("menu")
+		+ee("item")
+			display: block
+
+			+transition()
+
+			a
+				display: block
+				position: relative
+				color: #919191
+				text-decoration: none
+				text-transform: uppercase
+				+font('b')
+
+			&.current-menu-item a
+				color: $color-brand-1
+				&:before,
+				&:after
+					width: 100%
+
+			+max(md)
+				margin-bottom: 10px
+
+				a
+					padding: 10px 15px
+
+
+			+min(md)
+				display: inline-block
+				vertical-align: middle
+
+				&:not(:last-child)
+					margin-right: 15px
+
+				a
+					padding-top: 7.5px
+					padding-bottom: 7.5px
+
+					+linkEffect3
