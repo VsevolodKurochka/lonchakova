@@ -4,7 +4,7 @@
 		<div class="row">
 			{% for icon in post.get_field('format_items') %}
 				{{
-					siteMacros.icon('icon_type-1', icon.image, icon.title, icon.content)
+					siteMacros.icon('col-12 col-sm-4 icon_type-1', icon.image, icon.title, icon.content)
 				}}
 			{% endfor %}
 		</div>

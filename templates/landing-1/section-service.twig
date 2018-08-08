@@ -4,7 +4,7 @@
 		<div class="row">
 			{% for icon in post.get_field('service_icons') %}
 				{{
-					siteMacros.icon('icon_center', icon.image, null, icon.content)
+					siteMacros.icon('col-12 col-sm-4 icon_center', icon.image, null, icon.content)
 				}}
 			{% endfor %}
 		</div>
