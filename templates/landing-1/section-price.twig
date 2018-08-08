@@ -1,5 +1,23 @@
 <section class="section price">
 	<div class="container">
-		{{siteMacros.titleSection( post.get_field('price_title'), 'price__title' )}}
+		{{siteMacros.titleSection( post.get_field('price_format_title'), 'price__title' )}}
+		<div class="row">
+			{{
+				siteMacros.format(
+					'format_1', 
+					post.get_field('format_image'), 
+					post.get_field('format_title'), 
+					post.get_field('format_content')
+				)
+			}}
+			{{
+				siteMacros.format(
+					'format_2', 
+					post.get_field('price_image'), 
+					post.get_field('price_title'), 
+					post.get_field('price_content')
+				)
+			}}
+		</div>
 	</div>
 </section>

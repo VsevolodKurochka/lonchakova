@@ -42,3 +42,15 @@
 		<div class="icon__content">{{content}}</div>
 	</div>
 {% endmacro %}
+
+{% macro format(class, image, title, content) %}
+	<div class="col-12 col-sm-6 format {{class}}">
+		<img src="{{image}}" alt="{{content|striptags}}" class="format__image">
+		<div class="format__body">
+			{% if title %}
+				<p class="format__title">{{title}}</p>
+			{% endif %}
+			<div class="format__content">{{content}}</div>
+		</div>
+	</div>
+{% endmacro %}
