@@ -3,12 +3,17 @@
 	+relative()
 	overflow: hidden
 	z-index: 1
-	margin-bottom: 0
+	
+	+min(sm)
+		margin-bottom: 0
 
 	&__bg
 		+absolute()
 		z-index: -1
-		max-height: 200px
+		max-height: 100px
+
+		+max(sm)
+			opacity: 0.2
 
 		+min(sm)
 			max-height: 200px
@@ -39,20 +44,19 @@
 
 	&__item
 
-		&_1
-			margin-bottom: 90px
+		+max(sm)
+			+offset(45px)
 
-		&_2
-			+min(sm)
+		+min(sm)
+			&_1
+				margin-bottom: 90px
+			&_2
 				margin-bottom: 150px
 				justify-content: flex-end
-
-		&_3
-			+min(sm)
+			&_3
 				margin-bottom: 45px
-		
-		&_4
-			+min(sm)
+			
+			&_4
 				justify-content: flex-end
 
 		&-column
@@ -94,10 +98,13 @@
 		&-image
 			+absolute(50%)
 			z-index: -1
-			height: 100%
+			height: 100px
 			transform: translateY(-50%)
-			+min(lg)
-				height: 300px
+			opacity: 0.5
+
+			+min(sm)
+				opacity: 1
+				height: 150px
 			
 			+min(md)
 				height: 200px
