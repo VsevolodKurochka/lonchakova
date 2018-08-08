@@ -1,0 +1,65 @@
+.format
+
+	&__content
+		margin-bottom: 45px
+
+		+min(md)
+			margin-bottom: 60px
+
+	&__footer
+		text-align: center
+
+	&-item
+
+		&__inner
+			+relative()
+			z-index: 1
+			overflow: hidden
+			padding: 60px 15px
+
+			+min(md)
+				padding: 120px 30px
+
+		&__image
+			+absolute(50%, -15%)
+			height: 80%
+			opacity: 0.1
+			transform: translateY(-50%)
+			z-index: -1
+
+		&__title
+			font-size: 25px
+			text-transform: uppercase
+			line-height: 1.1
+			margin-bottom: 30px
+			+font('b')
+			
+			+min(sm)
+				font-size: 30px
+
+			+min(md)
+				font-size: 32px
+
+			+min(lg)
+				font-size: 36px
+
+		&__content
+			+font('l')
+			font-size: 19px
+			
+			+min(sm)
+				font-size: 22px
+
+			+min(lg)
+				font-size: 24px
+
+		&_1 &
+			&__inner
+				background-color: $color-brand-2
+			&__title
+				color: $color-white
+
+		&_2 &
+			&__inner
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 35px 30px 0px rgba(0, 0, 0, 0.27)

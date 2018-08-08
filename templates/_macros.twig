@@ -44,13 +44,15 @@
 {% endmacro %}
 
 {% macro format(class, image, title, content) %}
-	<div class="col-12 col-sm-6 format {{class}}">
-		<img src="{{image}}" alt="{{content|striptags}}" class="format__image">
-		<div class="format__body">
-			{% if title %}
-				<p class="format__title">{{title}}</p>
-			{% endif %}
-			<div class="format__content">{{content}}</div>
+	<div class="col-12 col-sm-6 format-item {{class}}">
+		<div class="format-item__inner">
+			<img src="{{image}}" alt="{{content|striptags}}" class="format-item__image">
+			<div class="format-item__body">
+				{% if title %}
+					<div class="format-item__title">{{title}}</div>
+				{% endif %}
+				<div class="format-item__content">{{content}}</div>
+			</div>
 		</div>
 	</div>
 {% endmacro %}

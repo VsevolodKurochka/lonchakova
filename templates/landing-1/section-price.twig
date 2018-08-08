@@ -1,10 +1,10 @@
-<section class="section price">
+<section class="section format">
 	<div class="container">
-		{{siteMacros.titleSection( post.get_field('price_format_title'), 'price__title' )}}
-		<div class="row">
+		{{siteMacros.titleSection( post.get_field('price_format_title'), 'format__title' )}}
+		<div class="format__content row">
 			{{
 				siteMacros.format(
-					'format_1', 
+					'format-item_1', 
 					post.get_field('format_image'), 
 					post.get_field('format_title'), 
 					post.get_field('format_content')
@@ -12,12 +12,15 @@
 			}}
 			{{
 				siteMacros.format(
-					'format_2', 
+					'format-item_2', 
 					post.get_field('price_image'), 
 					post.get_field('price_title'), 
 					post.get_field('price_content')
 				)
 			}}
+		</div>
+		<div class="format__footer">
+			{{siteMacros.buttonModal()}}
 		</div>
 	</div>
 </section>
