@@ -1,19 +1,19 @@
 <section class="section create">
 	<div class="container">
-		{{siteMacros.titleSection( post.get_field('create_title') )}}
+		{{siteMacros.titleSection( post.get_field('create_title'), 'create__title' )}}
 		<div class="row">
-			<div class="col-12 col-sm-6">
+			<div class="col-12 col-md-6">
 				{% set i = 0 %}
 				{% for item in post.get_field('create_steps') %}
 					{% set i = i + 1 %}
 					<div class="row create__row create__row_{{i}}">
 						{{
-							siteMacros.icon('col-12 col-sm-6 icon_type-1', item.image, null, item.content)
+							siteMacros.icon('col-12 col-md-6 icon_type-1', item.image, null, item.content)
 						}}
 					</div>
 				{% endfor %}
 			</div>
-			<div class="col-12 col-sm-6">
+			<div class="col-12 col-md-6">
 				<img src="{{post.get_field('create_image')}}" alt="{{post.get_field('create_title')}}">
 			</div>
 		</div>
