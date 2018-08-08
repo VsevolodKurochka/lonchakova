@@ -27,8 +27,15 @@
 	<h3 class="section__title {{class}}">{{title}}</h3>
 {% endmacro %}
 
-{% macro buttonModal() %}
-	<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top">Заказать услугу</button>
+{% macro buttonModal(text, class) %}
+	{% if text %}
+		{% set button_text = text %}
+	{% else %}
+		{% set button_text = "Заказать услугу" %}
+	{% endif %}
+	<div class="section__button-outer {{class}}">
+		<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top">{{button_text}}</button>
+	</div>
 {% endmacro %}
 
 {% macro icon(class, image, title, content) %}

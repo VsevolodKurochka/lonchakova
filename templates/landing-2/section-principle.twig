@@ -1,0 +1,23 @@
+<section class="section format landing-2-format">
+	<div class="container">
+		{{siteMacros.titleSection( post.get_field('principle_title') )}}
+		<div class="row">
+			{{
+				siteMacros.format(
+					'format-item_1', 
+					post.get_field('principle_1_image'), 
+					post.get_field('principle_1_title'), 
+					post.get_field('principle_1_content')
+				)
+			}}
+			{{
+				siteMacros.format(
+					'format-item_2', 
+					post.get_field('principle_2_image'), 
+					post.get_field('principle_2_title'), 
+					post.get_field('principle_2_content')
+				)
+			}}
+		</div>
+	</div>
+</section>
