@@ -3,6 +3,7 @@
 	+relative()
 	overflow: hidden
 	z-index: 1
+	margin-bottom: 0
 
 	&__bg
 		+absolute()
@@ -10,6 +11,9 @@
 		max-height: 200px
 
 		+min(sm)
+			max-height: 200px
+
+		+min(md)
 			max-height: 350px
 
 		+min(lg)
@@ -43,18 +47,63 @@
 				margin-bottom: 150px
 				justify-content: flex-end
 
+		&_3
+			+min(sm)
+				margin-bottom: 45px
+		
+		&_4
+			+min(sm)
+				justify-content: flex-end
+
 		&-column
 			+relative()
 			z-index: 1
+			&:before
+				content: ""
+				+absolute()
+		
+		+min(sm)
+			&_1 &-column
+				&:before
+					top: 0%
+					left: 60%
+					+size(250px, 187px)
+					+bg('../img/step-1.svg')
+
+			&_2 &-column
+				&:before
+					top: 50%
+					left: -60%
+					+size(240px, 185px)
+					+bg('../img/step-2.svg')
+					transform: rotate(-15deg)
+
+		+min(lg)
+			&_1 &-column
+				&:before
+					top: -20%
+					left: 65%
+					+size(320px, 238px)
+
+			&_2 &-column
+				&:before
+					top: 30%
+					left: -45%
+					+size(290px, 228px)
 
 		&-image
 			+absolute(50%)
 			z-index: -1
 			height: 100%
 			transform: translateY(-50%)
-			+min(sm)
+			+min(lg)
 				height: 300px
+			
+			+min(md)
+				height: 200px
 
+			+min(lg)
+				height: 300px
 
 		&_1 &,
 		&_3 &
@@ -71,6 +120,12 @@
 		&_2 &
 			&-image
 				right: 0
+
+		&_4 &
+			&-image
+				right: 0
+				+min(sm)
+					height: 500px
 
 		&-title
 			margin-bottom: 15px
@@ -97,3 +152,11 @@
 
 			p
 				+offset(15px)
+
+	&__footer
+		text-align: center
+		margin-top: 45px
+
+		+min(sm)
+			margin-top: 60px
+			margin-bottom: 60px

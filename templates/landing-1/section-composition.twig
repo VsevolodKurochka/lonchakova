@@ -12,7 +12,7 @@
 			{% for step in post.get_field('composition_steps') %}
 				{% set i = i + 1 %}
 				<div class="row composition__item composition__item_{{i}}">
-					<div class="col-12 col-sm-8 col-md-6 composition__item-column">
+					<div class="col-12 col-sm-6 col-md-6 composition__item-column">
 						{% if step.image %}
 							<img src="{{step.image}}" class="composition__item-image" alt="{{step.title}}">
 						{% endif %}
@@ -23,6 +23,9 @@
 					</div>
 				</div>
 			{% endfor %}
+		</div>
+		<div class="composition__footer">
+			<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top">Заказать услугу</button>
 		</div>
 	</div>
 </section>
