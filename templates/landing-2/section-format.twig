@@ -1,0 +1,12 @@
+<section class="section">
+	<div class="container">
+		{{siteMacros.titleSection( post.get_field('format_title') )}}
+		<div class="row">
+			{% for icon in post.get_field('format_items') %}
+				{{
+					siteMacros.icon('icon_type-1', icon.image, icon.title, icon.content)
+				}}
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -5,15 +5,36 @@
 	&_center
 		text-align: center
 
+	@at-root
+		%offset
+			margin-bottom: 15px
+
+			+min(sm)
+				margin-bottom: 30px
+
 	&__header
+		@extend %offset
+
 		display: flex
 		align-items: center
 		justify-content: center
 		height: 100px
-		margin-bottom: 15px
+		
+	&__title
+		@extend %offset
+
+		line-height: 1.2
+		text-align: center
+		+font('b')
+		text-transform: uppercase
+		font-size: 20px
+
 
 		+min(sm)
-			margin-bottom: 30px
+			font-size: 22px
+
+		+min(md)
+			font-size: 24px
 
 	&__image
 		max-height: 100%
@@ -21,3 +42,6 @@
 	&__content
 		line-height: 1.6
 		+font('l')
+
+		p
+			+offset(15px)
