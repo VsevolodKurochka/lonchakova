@@ -1,0 +1,12 @@
+<section class="section service background" style="background-image: url({{post.get_field('service_bg')}})">
+	<div class="container">
+		{{siteMacros.titleSection( post.get_field('service_title'), 'service__title' )}}
+		<div class="row">
+			{% for icon in post.get_field('service_icons') %}
+				{{
+					siteMacros.icon('icon_center', icon.image, null, icon.content)
+				}}
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -26,3 +26,19 @@
 {% macro titleSection(title, class) %}
 	<h3 class="section__title {{class}}">{{title}}</h3>
 {% endmacro %}
+
+{% macro buttonModal() %}
+	<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top">Заказать услугу</button>
+{% endmacro %}
+
+{% macro icon(class, image, title, content) %}
+	<div class="col-12 col-sm-4 icon {{class}}">
+		<div class="icon__header">
+			<img src="{{image}}" alt="{{content|striptags}}" class="icon__image">
+		</div>
+		{% if title %}
+		<p class="icon__title">{{title}}</p>
+		{% endif %}
+		<div class="icon__content">{{content}}</div>
+	</div>
+{% endmacro %}
