@@ -1,0 +1,23 @@
+.services-item
+	+offset()
+	&__inner
+		+relative()
+		background-color: $color-white
+		z-index: 1
+		overflow: hidden
+
+	&__image
+		+absolute(null, 0)
+		z-index: -1
+		height: 100px
+
+		+min(md)
+			height: 250px
+
+	&:nth-child(1) &__image,
+	&:nth-child(2) &__image
+		top: 0
+
+	&:nth-child(3) &__image,
+	&:nth-child(4) &__image
+		bottom: 0
