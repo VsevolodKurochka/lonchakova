@@ -2,22 +2,64 @@
 	+offset()
 	&__inner
 		+relative()
-		background-color: $color-white
+		background-color: #fff
 		z-index: 1
 		overflow: hidden
+		padding: 30px 15px
+		+min(sm)
+			min-height: 400px
+
+		+min(md)
+			padding: 30px
+			min-height: 450px
 
 	&__image
 		+absolute(null, 0)
 		z-index: -1
 		height: 100px
 
-		+min(md)
-			height: 250px
-
 	&:nth-child(1) &__image,
 	&:nth-child(2) &__image
 		top: 0
 
-	&:nth-child(3) &__image,
+	&:nth-child(3) &,
+	&:nth-child(4) &
+		&__image
+			bottom: 0
+		&__inner
+			background-color: #f6f6f6
+
+	&:nth-child(1) &__image
+		+min(md)
+			height: 200px
+
+	&:nth-child(2) &__image
+		+min(md)
+			height: 150px
+
+	&:nth-child(3) &__image
+		+min(md)
+			height: 300px
+
 	&:nth-child(4) &__image
-		bottom: 0
+		+min(md)
+			height: 200px
+
+
+	&__title
+		+font('l')
+		line-height: 1.1
+		font-size: 25px
+		margin-bottom: 30px
+
+		+min(md)
+			font-size: 30px
+
+		+min(lg)
+			min-height: 80px
+			font-size: 36px
+
+	&__content
+		margin-bottom: 30px
+		p
+			+offset(15px)
