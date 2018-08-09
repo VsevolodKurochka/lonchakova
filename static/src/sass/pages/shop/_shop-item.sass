@@ -25,10 +25,10 @@
 			padding-bottom: 45px
 	
 	@at-root
-		%offset
+		%shop-item-offset
 			margin-bottom: 15px
 
-		%title
+		%shop-item-title
 			text-transform: uppercase
 			line-height: 1.1
 			+font('b')
@@ -36,12 +36,12 @@
 	&__subtitle
 		margin-bottom: 5px
 		font-size: 17px
-		@extend %title
+		@extend %shop-item-title
 
 	&__title
 		font-size: 20px
 		color: $color-brand-1
-		@extend %title, %offset
+		@extend %shop-item-title, %shop-item-offset
 
 		+min(md)
 			font-size: 21px
@@ -53,12 +53,12 @@
 		+font('l')
 		font-size: 16px
 		line-height: 1.5
-		@extend %offset
+		@extend %shop-item-offset
 
 	&__price
 		+font('b')
 		font-size: 25px
-		@extend %offset
+		@extend %shop-item-offset
 
 		+min(md)
 			font-size: 32px

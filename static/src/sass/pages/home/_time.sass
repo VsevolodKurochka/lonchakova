@@ -1,0 +1,15 @@
+.home-time
+	@at-root
+		%home-time-title-offset
+			margin-bottom: 30px
+	&__title
+		@extend %home-time-title-offset
+		text-align: left
+	&__subtitle
+		@extend %home-time-title-offset
+		font-size: 20px
+		+min(md)
+			font-size: 24px
+
+	.wpcf7 form > p
+		display: flex

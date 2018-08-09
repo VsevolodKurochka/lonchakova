@@ -1,14 +1,7 @@
-+b("form")
++b("wpcf7")
 	$self: &
 
 	width: 100%
-
-	&_block &__row
-		margin-bottom: 15px
-
-	+max(sm)
-		&_line &__row
-			margin-bottom: 15px
 
 	+min(sm)
 		&_line &
@@ -59,10 +52,10 @@
 			&__row
 				margin-top: 30px
 	@else
-		&__control
+		.wpcf7-text
 			+input-default
 
-			border: 1px solid #ddd
+			border: 1px solid #fff
 
 			&:focus
 				border-color: $color-brand-1

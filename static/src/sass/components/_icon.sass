@@ -4,16 +4,15 @@
 
 	&_center
 		text-align: center
-
 	@at-root
-		%offset
+		%icon-offset
 			margin-bottom: 15px
 
 			+min(sm)
 				margin-bottom: 30px
 
 	&__header
-		@extend %offset
+		@extend %icon-offset
 
 		display: flex
 		align-items: center
@@ -21,7 +20,7 @@
 		height: 100px
 		
 	&__title
-		@extend %offset
+		@extend %icon-offset
 
 		line-height: 1.2
 		text-align: center
