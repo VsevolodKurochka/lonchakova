@@ -94,3 +94,14 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro servicesItem(class, item) %}
+	<div class="services-item {{class}}">
+		<div class="services-item__inner">
+			<img src="{{item.image}}" alt="{{item.title|striptags}}" class="services-item__image">
+			<p class="services-item__title">{{item.title}}</p>
+			<div class="services-item__content">{{item.content}}</div>
+			<a href="{{item.link}}" target="_blank" class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top services-item__buy">Подробнее об услуге</a>
+		</div>
+	</div>
+{% endmacro %}
