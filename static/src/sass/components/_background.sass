@@ -1,15 +1,11 @@
 .background
 	+relative()
 	+blackout()
-	+padding-y(45px)
+	+bg-inner-padding()
 	z-index: 1
 	color: $color-white
 	background-size: cover
 	
-	+min(sm)
-		+padding-y(60px)
-
 	+min(lg)
-		+padding-y(90px)
 		@media only screen
 			background-attachment: fixed
