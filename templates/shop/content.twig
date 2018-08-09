@@ -1,0 +1,12 @@
+<section class="section">
+	<div class="container">
+		{{siteMacros.titleSection( post.get_field('shop_title') )}}
+		<div class="row">
+			{% for item in post.get_field('shop_items') %}
+				{{
+					siteMacros.shopItem('col-12 col-sm-6', item)
+				}}
+			{% endfor %}
+		</div>
+	</div>
+</section>

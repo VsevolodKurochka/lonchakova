@@ -63,3 +63,22 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro shopItem(class, item) %}
+	<div class="shop-item {{class}}">
+		<div class="shop-item__inner">
+			<div class="shop-item__header">
+				<img src="{{item.image}}" alt="{{item.title|striptags}}" class="shop-item__image">
+			</div>
+			<div class="shop-item__body">
+				<p class="shop-item__subtitle">{{item.subtitle}}</p>
+				<p class="shop-item__title">{{item.title}}</p>
+				<div class="shop-item__description">{{item.description}}</div>
+				<p class="shop-item__price">{{item.price}}<sup>грн</sup></p>
+				<div class="shop-item__body-link-outer">
+					<a href="{{item.link}}" target="_blank" class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top">Купить</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
