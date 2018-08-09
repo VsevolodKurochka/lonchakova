@@ -1,7 +1,7 @@
 <section class="home-calendar background" style="background-image: url({{post.get_field('calendar_bg')}})">
 	<div class="container">
 		{{siteMacros.titleSection( post.get_field('calendar_title'), 'home-calendar__title' )}}
-		<p class="home-calendar__subtitle">{{post.get_field('calendar_subtitle')}}</p>
+		<p class="section__subtitle">{{post.get_field('calendar_subtitle')}}</p>
 		{{function('do_shortcode', '[ecs-list-events design="calendar"]')}}
 	</div>
 </section>
