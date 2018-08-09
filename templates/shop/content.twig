@@ -1,10 +1,12 @@
 <section class="section">
 	<div class="container">
 		{{siteMacros.titleSection( post.get_field('shop_title') )}}
-		<div class="row">
+		<div class="row shop__row">
+			{% set i = 0 %}
 			{% for item in post.get_field('shop_items') %}
+				{% set i = i + 1 %}
 				{{
-					siteMacros.shopItem('col-12 col-sm-6', item)
+					siteMacros.shopItem('col-12 col-sm-6', item, i)
 				}}
 			{% endfor %}
 		</div>

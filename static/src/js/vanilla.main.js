@@ -207,5 +207,7 @@
 
 		new Navigation();
 
+		new Modal();
+
 	});
 }());

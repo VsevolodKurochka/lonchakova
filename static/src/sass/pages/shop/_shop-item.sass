@@ -1,0 +1,85 @@
+.shop-item
+	&__inner
+		+relative()
+		background-color: rgb(246, 246, 246)
+		box-shadow: 0px 35px 30px 0px rgba(0, 0, 0, 0.27)
+
+	&__header
+		+relative()
+		overflow: hidden
+		height: 200px
+
+		+min(md)
+			height: 250px
+
+		&-image
+			+size(100%)
+			object-fit: cover
+
+	&__body
+		padding: 20px 15px
+		text-align: center
+		+min(md)
+			+margin-x(auto)
+			width: 350px
+			padding-bottom: 45px
+	
+	@at-root
+		%offset
+			margin-bottom: 15px
+
+		%title
+			text-transform: uppercase
+			line-height: 1.1
+			+font('b')
+
+	&__subtitle
+		margin-bottom: 5px
+		font-size: 17px
+		@extend %title
+
+	&__title
+		font-size: 20px
+		color: $color-brand-1
+		@extend %title, %offset
+
+		+min(md)
+			font-size: 21px
+
+		+min(lg)
+			font-size: 22px
+
+	&__description
+		+font('l')
+		font-size: 16px
+		line-height: 1.5
+		@extend %offset
+
+	&__price
+		+font('b')
+		font-size: 25px
+		@extend %offset
+
+		+min(md)
+			font-size: 32px
+
+		sup
+			font-size: 50%
+
+	&__more
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		text-decoration: none
+		color: $color-black
+		+transition()
+		border: none
+		background-color: transparent
+		
+		&:hover
+			color: $color-brand-1
+
+	&__buy
+		vertical-align: middle
+		padding: 15px 30px
+		font-size: 16px

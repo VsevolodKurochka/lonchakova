@@ -1,8 +1,29 @@
 +b('modal')
 	
 	+e('body')
-		font-size: 15px
+		font-size: 18px
 		color: lighten($color-black, 30%)
+
+		h1, h2, h3, h4, h5, h6
+			+margin-y(0, 15px)
+			+font('b')
+			color: $color-brand-1
+
+		ul
+			+margin-y(30px)
+			list-style: none
+
+			li
+				position: relative
+				padding-left: 45px
+				+font('b')
+				&:not(:last-child)
+					margin-bottom: 15px
+				&:after
+					content: ""
+					+absolute(0, null, null, 0)
+					+size(25px)
+					+bg('../img/icon-check.svg')
 	
 	+e('inner')
 		max-height: 60vh

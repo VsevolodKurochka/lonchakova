@@ -64,11 +64,11 @@
 	</div>
 {% endmacro %}
 
-{% macro shopItem(class, item) %}
+{% macro shopItem(class, item, i) %}
 	<div class="shop-item {{class}}">
 		<div class="shop-item__inner">
 			<div class="shop-item__header">
-				<img src="{{item.image}}" alt="{{item.title|striptags}}" class="shop-item__image">
+				<img src="{{item.image}}" alt="{{item.title|striptags}}" class="shop-item__header-image">
 			</div>
 			<div class="shop-item__body">
 				<p class="shop-item__subtitle">{{item.subtitle}}</p>
@@ -76,8 +76,20 @@
 				<div class="shop-item__description">{{item.description}}</div>
 				<p class="shop-item__price">{{item.price}}<sup>грн</sup></p>
 				<div class="shop-item__body-link-outer">
-					<a href="{{item.link}}" target="_blank" class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top">Купить</a>
+					<button class="shop-item__more" data-action="modal" data-open="#shop-modal-{{i}}">Подробнее</button>
+					<a href="{{item.link}}" target="_blank" class="btn btn_shadow btn_brand-1 effect effect_bounce-top shop-item__buy">Купить</a>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="shop-modal-{{i}}">
+		<div class="modal__box modal__box_medium">
+			<div class="modal__header">
+				<button class="modal__close" data-close="modal">&times;
+				</button>
+			</div>
+			<div class="modal__body">
+				{{item.content}}
 			</div>
 		</div>
 	</div>
