@@ -1,0 +1,28 @@
+.reason-item
+	&__header
+		text-align: center
+		margin-bottom: 30px
+	&__content
+		+relative()
+		+font('l')
+		z-index: 1
+		p
+			+offset(15px)
+
+		+min(sm)
+			width: 90%
+			+margin-x(auto)
+			font-size: 19px
+
+		&-number
+			+absolute(0)
+			width: 100%
+			text-align: center
+			+font('b')
+			line-height: 1
+			z-index: -1
+			color: #f6f6f6
+			font-size: 250px
+
+			+min(md)
+				font-size: 400px
