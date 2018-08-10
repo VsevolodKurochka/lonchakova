@@ -105,3 +105,17 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro eventItem(class, event) %}
+	<div class="event-item {{class}}">
+		<div class="event-item__inner">
+			<p class="event-item__title">{{event.title}}</p>
+			<div class="event-item__subheader">
+				<p class="event-item__date">Дата: {{event.event_date|date('d.m.Y')}}</p>
+				<p class="event-item__time">Время: {{event.event_time}}</p>
+			</div>
+			<div class="event-item__description">{{event.description}}</div>
+			<button class="btn event-item__more">Подробнее</button>
+		</div>
+	</div>
+{% endmacro %}

@@ -1,0 +1,45 @@
+.event-item
+
+	+offset()
+	
+	&__inner
+		+relative()
+		background-color: #fff
+		z-index: 1
+		overflow: hidden
+		padding: 30px 15px
+		color: $color-black
+		+min(sm)
+			min-height: 400px
+
+		+min(md)
+			padding: 30px
+			min-height: 300px
+
+	&__title
+		+font('b')
+		line-height: 1.1
+		font-size: 25px
+		margin-bottom: 15px
+		color: $color-brand-1
+
+		+min(md)
+			font-size: 30px
+
+	&__subheader
+		margin-bottom: 15px
+
+	&__description
+		margin-bottom: 15px
+		p
+			+offset(15px)
+
+	&__more
+		border-radius: 0
+		background-color: transparent
+		color: $color-brand-1
+		border-bottom: 1px solid $color-brand-1
+
+		&:hover
+			color: $color-brand-2
+			border-bottom-color: $color-brand-2
