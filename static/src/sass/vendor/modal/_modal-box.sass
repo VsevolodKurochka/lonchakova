@@ -13,6 +13,11 @@
 		#{$self}_showing_in &
 			transform: none
 
+		+m('transparent')
+			background-color: transparent
+			.modal__close
+				color: $color-brand-1
+
 		+min(xs)
 			padding: 48px 24px
 			+m('default')
