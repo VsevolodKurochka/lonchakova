@@ -4,15 +4,19 @@
 		<p class="section__subtitle">{{post.get_field('video_subtitle')}}</p>
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<div class="home-video __content list list_check">
+				<div class="home-video__content list list_check">
 					{{post.get_field('video_content')}}
 				</div>
 			</div>
 			<div class="col-12 col-md-6">
 				<div class="home-video__pc">
 					<img src="{{post.get_field('video_image')}}" alt="{{post.get_field('video_title')|striptags}}">
+					<button class="btn btn_brand-1 effect effect_bounce-top home-video__pc-btn"></button>
 				</div>
 			</div>
+		</div>
+		<div class="home-video__footer">
+			{{function('do_shortcode', post.get_field('video_shortcode'))}}
 		</div>
 	</div>
 </section>

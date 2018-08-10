@@ -1,0 +1,31 @@
+.home-video
+
+	&__content
+		p
+			margin-bottom: 15px
+
+	&__pc
+		+relative()
+
+		&-btn
+			+absolute(50px, null, null, 50%)
+			transform: translateX(-50%)
+			+size(75px)
+			padding: 0
+			
+			+min(lg)
+				top: 125px
+
+			&:after
+				content: ""
+				+absolute(50%, null, null, 50%)
+				transform: translate(-50%, -50%)
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 0 10px 20px;
+				border-color: transparent transparent transparent $color-white;
+
+	.wpcf7 form > p
+		display: flex
+		justify-content: center
