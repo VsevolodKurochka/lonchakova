@@ -2,6 +2,74 @@
 	<div class="container">
 		{{siteMacros.titleSection( post.get_field('calendar_title'), 'home-calendar__title' )}}
 		<p class="section__subtitle">{{post.get_field('calendar_subtitle')}}</p>
-		{{function('do_shortcode', '[ecs-list-events design="calendar"]')}}
+		{#{function('do_shortcode', '[ecs-list-events design="calendar"]')}#}
+		<div id="calendar"></div>
+		<script src="{{theme.link}}/static/build/js/moment.min.js"></script>
+		<script src="{{theme.link}}/static/build/js/ru.js"></script>
+		<script src="{{theme.link}}/static/build/js/fullcalendar.min.js"></script>
+		<link rel="stylesheet" href="{{theme.link}}/static/build/css/fullcalendar.css">
+		<script>
+			jQuery(document).ready(function($){
+				$('#calendar').fullCalendar({
+					locale: 'ru',
+					events: [
+						{
+							title: 'All Day Event',
+							start: '2018-08-01',
+						},
+						{
+							title: 'Long Event',
+							start: '2018-08-07',
+							end: '2018-08-10'
+						},
+						{
+							id: 999,
+							title: 'Repeating Event',
+							start: '2018-08-09T16:00:00'
+						},
+						{
+							id: 999,
+							title: 'Repeating Event',
+							start: '2018-08-16T16:00:00'
+						},
+						{
+							title: 'Conference',
+							start: '2018-08-11',
+							end: '2018-08-13'
+						},
+						{
+							title: 'Meeting',
+							start: '2018-08-12T10:30:00',
+							end: '2018-08-12T12:30:00'
+						},
+						{
+							title: 'Lunch',
+							start: '2018-08-12T12:00:00'
+						},
+						{
+							title: 'Meeting',
+							start: '2018-08-12T14:30:00'
+						},
+						{
+							title: 'Happy Hour',
+							start: '2018-08-12T17:30:00'
+						},
+						{
+							title: 'Dinner',
+							start: '2018-08-12T20:00:00'
+						},
+						{
+							title: 'Birthday Party',
+							start: '2018-08-13T07:00:00'
+						},
+						{
+							title: 'Click for Google',
+							url: 'http://google.com/',
+							start: '2018-08-28'
+						}
+					]
+				});
+			});
+		</script>
 	</div>
 </section>

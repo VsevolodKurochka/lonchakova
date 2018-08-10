@@ -64,6 +64,11 @@ class StarterSite extends TimberSite {
 		wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/static/build/js/jquery.main.js', array(), '20151215', true );
 
 		wp_enqueue_script( 'js-vanilla-scripts', get_template_directory_uri() . '/static/build/js/vanilla.main.js', array(), '20151215', true );
+
+		// if(is_front_page()){
+		// 	wp_enqueue_script( 'js-calendar', get_template_directory_uri() . '/static/build/js/fullcalendar.min.js', array(), '20151215', true );
+		// 	wp_enqueue_style( 'css-calendar', get_template_directory_uri() . '/static/build/css/fullcalendar.css' );
+		// }
 	}
 
 	function generate_menu() {
