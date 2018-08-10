@@ -27,8 +27,23 @@ $args = array(
 		)
 	)
 );
-$context['current_date'] = date('Ymd');
 $context['events'] = new Timber\PostQuery($args);
+
+$args_past = array(
+	'post_type' 				=> 'events',
+	'posts_per_page' 		=> -1,
+	'post_status'		 		=> 'publish',
+	'orderby'	=> 'event_date',
+	'order'		=> 'DESC',
+	'meta_query' => array(
+		array(
+			'key'     		=> 'event_date',
+			'value'				=> date('Ymd'),
+			'compare' 		=> '<'
+		)
+	)
+);
+$context['events_past'] = new Timber\PostQuery($args_past);
 
 //print_r($context['events']);
 
