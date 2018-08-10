@@ -1,0 +1,24 @@
+.home-welcome
+	margin-bottom: 0
+	font-size: 0
+	
+	+min(md)
+		margin-top: 90px
+
+	@at-root
+		%home-welcome-title
+			text-align: left
+			margin-bottom: 30px
+	&__title
+		@extend %home-welcome-title
+	&__subtitle
+		+font('b')
+		@extend %home-welcome-title
+
+	&__content
+		font-size: 17px
+		+font('l')
+		p
+			+offset(15px)
+		ul
+			+margin-y(30px)
