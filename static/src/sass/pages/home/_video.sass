@@ -7,11 +7,22 @@
 	&__pc
 		+relative()
 
+		+max(md)
+			margin-top: 30px
+
+		+max(sm)
+			text-align: center
+			img
+				max-height: 200px
+
 		&-btn
-			+absolute(50px, null, null, 50%)
+			+absolute(60px, null, null, 50%)
 			transform: translateX(-50%)
-			+size(75px)
+			+size(50px)
 			padding: 0
+
+			+min(md)
+				+size(75px)
 			
 			+min(lg)
 				top: 125px
