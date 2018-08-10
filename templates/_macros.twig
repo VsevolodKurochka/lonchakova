@@ -9,7 +9,7 @@
 		{% endif %}
 		
 		{% if button_text %}
-			<button class="btn btn_shadow btn_lg btn_brand-1 header__button effect effect_bounce-top">{{button_text}}</button>
+			<button class="btn btn_shadow btn_lg btn_brand-1 header__button effect effect_bounce-top" data-action="modal" data-open="#modal-form">{{button_text}}</button>
 		{% endif %}
 	</div>
 {% endmacro %}
@@ -34,7 +34,7 @@
 		{% set button_text = "Заказать услугу" %}
 	{% endif %}
 	<div class="section__button-outer {{class}}">
-		<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top">{{button_text}}</button>
+		<button class="btn btn_shadow btn_lg btn_brand-1 effect effect_bounce-top" data-action="modal" data-open="#modal-form">{{button_text}}</button>
 	</div>
 {% endmacro %}
 
