@@ -3,3 +3,16 @@
 	&__row
 		+min(md)
 			justify-content: flex-end
+
+	@at-root
+		%home-info-title
+			text-align: left
+			margin-bottom: 30px
+
+	&__title
+		@extend %home-info-title
+	&__subtitle
+		@extend %home-info-title
+	
+	.wpcf7 form > p
+		display: flex
