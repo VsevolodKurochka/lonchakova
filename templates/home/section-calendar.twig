@@ -13,15 +13,19 @@
 			<div class="tabs__content">
 				<div class="tabs__content-inner" id="tab-1">
 					<div class="row">
+						{% set i = 0 %}
 						{% for event in events_past %}
-							{{siteMacros.eventItem('col-12 col-sm-6', event)}}
+							{% set i = i + 1 %}
+							{{siteMacros.eventItem('col-12 col-sm-6', event, "event-past-modal-#{i}")}}
 						{% endfor %}
 					</div>
 				</div>
 				<div class="tabs__content-inner active" id="tab-2">
 					<div class="row">
+						{% set i = 0 %}
 						{% for event in events %}
-							{{siteMacros.eventItem('col-12 col-sm-6', event)}}
+							{% set i = i + 1 %}
+							{{siteMacros.eventItem('col-12 col-sm-6', event, "event-new-modal-#{i}")}}
 						{% endfor %}
 					</div>
 				</div>
