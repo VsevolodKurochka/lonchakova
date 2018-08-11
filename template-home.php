@@ -18,7 +18,7 @@ $args = array(
 	'posts_per_page' 		=> -1,
 	'post_status'		 		=> 'publish',
 	'orderby'	=> 'event_date',
-	'order'		=> 'DESC',
+	'order'		=> 'ASC',
 	'meta_query' => array(
 		array(
 			'key'     		=> 'event_date',
@@ -34,7 +34,7 @@ $args_past = array(
 	'posts_per_page' 		=> -1,
 	'post_status'		 		=> 'publish',
 	'orderby'	=> 'event_date',
-	'order'		=> 'DESC',
+	'order'		=> 'ASC',
 	'meta_query' => array(
 		array(
 			'key'     		=> 'event_date',
