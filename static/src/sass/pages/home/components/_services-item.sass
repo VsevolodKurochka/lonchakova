@@ -29,20 +29,17 @@
 		&__inner
 			background-color: #f6f6f6
 
-	&:nth-child(1) &__image
-		+min(md)
+	+min(md)
+		&:nth-child(1) &__image
 			height: 200px
 
-	&:nth-child(2) &__image
-		+min(md)
-			height: 150px
+		&:nth-child(2) &__image
+			height: 250px
 
-	&:nth-child(3) &__image
-		+min(md)
+		&:nth-child(3) &__image
 			height: 300px
 
-	&:nth-child(4) &__image
-		+min(md)
+		&:nth-child(4) &__image
 			height: 200px
 
 
@@ -64,3 +61,6 @@
 		margin-bottom: 30px
 		p
 			+offset(15px)
+
+		+min(md)
+			min-height: 200px
