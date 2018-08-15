@@ -9,7 +9,7 @@
 					</div>
 					<div class="reviews-item__footer">
 						<p class="reviews-item__name">{{item.name}}</p>
-						<img src="{{item.image}}" alt="{{item.name}}">
+						<img src="{{item.image|resize(60, 60)}}" alt="{{item.name}}">
 					</div>
 				</div>
 			{% endfor %}
