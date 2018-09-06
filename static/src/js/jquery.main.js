@@ -29,6 +29,20 @@ $(document).ready(function(){
 		}
 	});
 
+	if($(window).width() < 768){
+		$('.home-reviews__content').addClass('owl-carousel');
+		$('.home-reviews__content').owlCarousel({
+			loop: true,
+			margin: 0,
+			nav: false,
+			items: 1,
+			dots: true,
+			autoplay: false,
+			autoplayTimeout: 3000,
+			autoHeight: true
+		});
+	}
+
 	// Tabs
 		$('[data-action="tab"]').click(function(){			
 			// Tab links toggle class
