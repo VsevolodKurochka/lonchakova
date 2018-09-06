@@ -18,14 +18,21 @@
 		+max(md)
 			margin-bottom: 10px
 			a
+				color: $color-white
 				padding: 10px 15px
+			
+			&.current-menu-item a
+				color: $color-white
+				background-color: $color-brand-2
 
 		> ul
 			+relative
 
 			+max(md)
+				padding-left: 30px
 				a
-					padding: 10px
+					font-size: 12px
+					padding: 5px
 
 			+min(md)
 
