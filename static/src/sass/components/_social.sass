@@ -1,0 +1,30 @@
+.social
+	font-size: 0
+	list-style: none
+
+	&__item
+		display: inline-block
+		vertical-align: middle
+		&:not(:last-child)
+			margin-right: 10px
+
+	&__link
+		position: relative
+		display: inline-block
+		cursor: pointer
+		text-align: center
+		+transition()
+
+	&__image
+		display: inline-block
+		vertical-align: middle
+		width: 15px
+
+	&_nav
+		+min(md)
+			display: inline-block
+			vertical-align: middle
+
+	&_nav &__link
+		&:hover
+			opacity: 0.7

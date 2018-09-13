@@ -20,3 +20,27 @@
 
 			+m('active')
 				transform: none
+
+		+min(md)
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+		&-options
+
+			&-link
+				display: block
+				color: $color-white
+				text-decoration: none
+				font-size: 12px
+				text-transform: uppercase
+				+font('b')
+				+transition()
+
+				&:hover
+					color: $color-brand-1
+
+				+min(md)
+					display: inline-block
+					vertical-align: middle
+					margin-right: 15px
