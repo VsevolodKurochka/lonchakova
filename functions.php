@@ -68,7 +68,7 @@ class StarterSite extends TimberSite {
 			'public'              => true,
 			'hierarchical'        => false,
 			'supports'            => array('title'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-			'taxonomies'          => array('category'),
+			'taxonomies'          => array(),
 			'has_archive'         => true,
 			'rewrite'             => true,
 			'query_var'           => true
