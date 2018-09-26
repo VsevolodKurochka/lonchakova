@@ -1,0 +1,19 @@
+<section class="section format">
+	<div class="container">
+		{{siteMacros.titleSection( post.get_field('price_format_title'), 'format__title' )}}
+		<div class="format__table">
+			<div class="format__table-column format__table-column_1">
+				<p class="format__table-column-title format__table-column-title_large">Анализ гардероба</p>
+				<ul class="format__table-column-list">
+					{% for li in post.get_field('price_analiz') %}
+						<li>{{li.name}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="format__table-column format__table-column_2">
+				<p class="format__table-column-title format__table-column-title_1">Оптимальный</p>
+			</div>
+			<div class="format__table-column format__table-column_3"></div>
+		</div>
+	</div>
+</section>
