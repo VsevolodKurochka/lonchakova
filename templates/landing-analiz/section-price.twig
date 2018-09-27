@@ -7,7 +7,7 @@
 				<div class="format__table-body">
 					<ul class="format__table-list format__table-list_1">
 						{% for li in post.get_field('price_analiz') %}
-							<li>{{li.name}}</li>
+							<li class="format__table-list-li">{{li.name}}</li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -25,18 +25,19 @@
 				<div class="format__table-body format__table-body_shadow">
 					<ul class="format__table-list">
 						{% for li in post.get_field('price_analiz') %}
-							<li>
+							<li class='format__table-list-li {{li.status_optimal ? "format__table-list-li_#{li.status_optimal}" : ''}}'>
 								<span class='format__table-list-check {{li.status_optimal ? "format__table-list-check_#{li.status_optimal}" : ''}}'></span>
+								<p class="format__table-list-hidden">{{li.status_optimal ? li.name : ""}}</p>
 							</li>
 						{% endfor %}
 					</ul>
 				</div>
 				<div class="format__table-footer">
 					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p>{{post.get_field('time_optimal')}}</p>
+						<p><span class="format__table-footer-item-span">Продолжительность</span>{{post.get_field('time_optimal')}}</p>
 					</div>
 					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p>{{post.get_field('price_optimal')}}</p>
+						<p><span class="format__table-footer-item-span">Стоимость услуги</span>{{post.get_field('price_optimal')}}</p>
 					</div>
 				</div>
 			</div>
@@ -45,18 +46,19 @@
 				<div class="format__table-body format__table-body_shadow">
 					<ul class="format__table-list">
 						{% for li in post.get_field('price_analiz') %}
-							<li>
+							<li class='format__table-list-li {{li.status_max ? "format__table-list-li_#{li.status_max}" : ''}}'>
 								<span class='format__table-list-check {{li.status_max ? "format__table-list-check_#{li.status_max}" : ''}}'></span>
+								<p class="format__table-list-hidden">{{li.status_max ? li.name : ""}}</p>
 							</li>
 						{% endfor %}
 					</ul>
 				</div>
 				<div class="format__table-footer">
 					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p>{{post.get_field('time_maximal')}}</p>
+						<p><span class="format__table-footer-item-span">Продолжительность</span>{{post.get_field('time_maximal')}}</p>
 					</div>
 					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p>{{post.get_field('price_maximal')}}</p>
+						<p><span class="format__table-footer-item-span">Стоимость услуги</span>{{post.get_field('price_maximal')}}</p>
 					</div>
 				</div>
 			</div>

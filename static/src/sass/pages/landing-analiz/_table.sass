@@ -1,16 +1,29 @@
 .format__table
 
 	&-column
+		padding: 15px
+		flex-basis: 100%
+		+max(sm)
+			+offset(45px)
+			&_1
+				display: none
 		+min(sm)
+			padding: 5px
 			flex-basis: 200px
 			&_1
 				flex-basis: 0
 				flex-grow: 1
 		+min(md)
-			padding: 5px
+			
 			flex-basis: 300px
 
 	&-title
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 60px
+		font-size: 15px
+
 		text-transform: uppercase
 		+font('b')
 		line-height: 1
@@ -25,16 +38,12 @@
 			background-color: #1e919b
 			color: $color-white
 
-		+min(sm)
-			display: flex
-			justify-content: center
-			align-items: center
-			height: 60px
-			font-size: 1.5vmax
-
 			&_1
 				justify-content: flex-start
 				padding-left: 30px
+
+		+min(sm)
+			font-size: 1.5vmax
 
 		+min(md)
 			height: 80px
@@ -59,7 +68,15 @@
 		+min(md)
 			font-size: 18px
 
-		li
+		&-li
+			+max(sm)
+				display: none
+				+offset(15px)
+				br
+					display: none
+				&_1
+					display: block
+					
 			+min(sm)
 				display: flex
 				align-items: center
@@ -79,10 +96,17 @@
 
 		&-check
 			display: inline-block
-			+size(26px)
+			+size(20px)
+			+min(md)
+				+size(26px)
 
 			&_1
 				+bg('../img/icon-check-1.svg')
+
+		&-hidden
+			display: block
+			+min(sm)
+				display: none
 
 	&-footer
 
@@ -94,8 +118,9 @@
 			display: flex
 			align-items: center
 			justify-content: center
-			height: 50px
-			font-size: 20px
+			text-align: center
+			height: 70px
+			font-size: 17px
 			+offset(10px)
 			+font('b')
 
@@ -105,8 +130,16 @@
 
 			+min(sm)
 				&_1
+					text-align: right
 					justify-content: flex-end
 
 			+min(md)
 				font-size: 22px
 				height: 65px
+
+			&-span
+				display: block
+				font-size: 14px
+				+font('l')
+				+min(sm)
+					display: none
