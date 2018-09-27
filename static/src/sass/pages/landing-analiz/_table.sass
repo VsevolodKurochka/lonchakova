@@ -1,0 +1,112 @@
+.format__table
+
+	&-column
+		+min(sm)
+			flex-basis: 200px
+			&_1
+				flex-basis: 0
+				flex-grow: 1
+		+min(md)
+			padding: 5px
+			flex-basis: 300px
+
+	&-title
+		text-transform: uppercase
+		+font('b')
+		line-height: 1
+		
+		&_1
+			background-color: #f4f4f4
+			color: $color-black
+		&_2
+			background-color: #76c5cc
+			color: $color-white
+		&_3
+			background-color: #1e919b
+			color: $color-white
+
+		+min(sm)
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 60px
+			font-size: 1.5vmax
+
+			&_1
+				justify-content: flex-start
+				padding-left: 30px
+
+		+min(md)
+			height: 80px
+			&_1
+				font-size: 2vmax
+
+	&-body
+		margin-bottom: 10px
+		padding: 30px 15px
+		background-color: $color-white
+
+		&_shadow
+			box-shadow: 0px 35px 30px 0px rgba(0, 0, 0, 0.27)
+
+	&-list
+		list-style: none
+		+font('l')
+
+		+min(sm)
+			font-size: 16px
+
+		+min(md)
+			font-size: 18px
+
+		li
+			+min(sm)
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 50px
+				margin-bottom: 10px
+
+			+min(md)
+				height: 60px
+
+		&_1
+			text-align: right
+
+		&_1 li
+			+min(sm)
+				justify-content: flex-end
+
+		&-check
+			display: inline-block
+			+size(26px)
+
+			&_1
+				+bg('../img/icon-check-1.svg')
+
+	&-footer
+
+		&_1
+			+min(sm)
+				padding-right: 10px
+
+		&-item
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 50px
+			font-size: 20px
+			+offset(10px)
+			+font('b')
+
+			&_shadow
+				background-color: $color-white
+				box-shadow: 0px 35px 30px 0px rgba(0, 0, 0, 0.27)
+
+			+min(sm)
+				&_1
+					justify-content: flex-end
+
+			+min(md)
+				font-size: 22px
+				height: 65px
