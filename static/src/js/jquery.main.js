@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
 
 	function scroll(scrollLink, speed){
 		$('html, body').animate({
@@ -53,6 +53,12 @@ $(document).ready(function(){
 				$(tabTarget).fadeIn(0);
 				$(".tabs__content > div").not($(tabTarget)).fadeOut(0);
 		});
+
+	$('[data-type]').click(function(){
+		var text = $(this).attr('data-type');
+		var open = $(this).attr('data-open');
+		$(open).find('form input[name="your-type"]').val(text);
+	});
 	
 
 });	
