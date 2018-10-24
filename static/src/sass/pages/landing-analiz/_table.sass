@@ -3,19 +3,18 @@
 	&-column
 		+padding-x(15px)
 		flex-basis: 100%
+		
 		+max(sm)
 			+offset(45px)
 			&_1
 				display: none
+
 		+min(sm)
 			+padding-x(5px)
-			flex-basis: 200px
+			flex-basis: 0
+			flex-grow: 1
 			&_1
-				flex-basis: 0
-				flex-grow: 1
-		+min(md)
-			
-			flex-basis: 300px
+				flex-grow: 2
 
 	&-title
 		display: flex
@@ -43,12 +42,11 @@
 				padding-left: 30px
 
 		+min(sm)
-			font-size: 1.5vmax
+			font-size: 17px
 
 		+min(md)
-			height: 80px
 			&_1
-				font-size: 2vmax
+				font-size: 20px
 
 	&-body
 		margin-bottom: 10px
@@ -80,14 +78,22 @@
 					display: block
 
 			+min(sm)
-				display: flex
-				align-items: center
-				justify-content: center
-				height: 50px
+				// display: flex
+				// align-items: center
+				// justify-content: center
+				min-height: 50px
 				margin-bottom: 10px
 
+				&_1
+					text-align: center
+
+				&:last-child
+					min-height: 150px
+
 			+min(md)
-				height: 60px
+				min-height: 90px
+				&:nth-child(4)
+					min-height: 80px
 
 		&_1
 			text-align: right
@@ -97,18 +103,22 @@
 				justify-content: flex-end
 
 		&-check
-			display: inline-block
-			+size(20px)
-			+min(md)
-				+size(26px)
-
+			display: none
+			
 			&_1
+				display: inline-block
+				+size(20px)
+				+min(md)
+					+size(26px)
 				+bg('../img/icon-check-1.svg')
 
 		&-hidden
 			display: block
 			+min(sm)
 				display: none
+
+		&-content
+			font-size: 12px
 
 	&-footer
 
