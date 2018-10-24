@@ -1,73 +1,100 @@
 <section class="section format">
-	<div class="container">
-		{{siteMacros.titleSection( post.get_field('price_format_title'), 'format__title' )}}
-		<div class="row format__table">
-			<div class="format__table-column format__table-column_1">
-				<p class="format__table-title format__table-title_1 format__table-title_large">Анализ гардероба</p>
-				<div class="format__table-body">
-					<ul class="format__table-list format__table-list_1">
-						{% for li in post.get_field('price_analiz') %}
-							<li class="format__table-list-li">{{li.name}}</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div class="format__table-footer format__table-footer_1">
-					<div class="format__table-footer-item format__table-footer-item_1">
-						<p>Продолжительность</p>
-					</div>
-					<div class="format__table-footer-item format__table-footer-item_1">
-						<p>Стоимость услуги</p>
-					</div>
-				</div>
-			</div>
-			<div class="format__table-column format__table-column_2">
-				<p class="format__table-title format__table-title_2">Оптимальный</p>
-				<div class="format__table-body format__table-body_shadow">
-					<ul class="format__table-list">
-						{% for li in post.get_field('price_analiz') %}
-							<li class='format__table-list-li {{li.status_optimal ? "format__table-list-li_#{li.status_optimal}" : ''}}'>
-								<span class='format__table-list-check {{li.status_optimal ? "format__table-list-check_#{li.status_optimal}" : ''}}'></span>
-								<p class="format__table-list-hidden">{{li.status_optimal ? li.name : ""}}</p>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div class="format__table-footer">
-					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p><span class="format__table-footer-item-span">Продолжительность</span>{{post.get_field('time_optimal')}}</p>
-					</div>
-					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p><span class="format__table-footer-item-span">Стоимость услуги</span>{{post.get_field('price_optimal')}}</p>
-					</div>
-				</div>
-				<div class="format__table-addition">
-					<button class="btn btn_brand-1 btn_lg effect effect_bounce-top" data-action="modal" data-open="#modal-form" data-type="Анализ гардероба 'Оптимальный'">Записаться</button>
-				</div>
-			</div>
-			<div class="format__table-column format__table-column_3">
-				<p class="format__table-title format__table-title_3">Максимальный</p>
-				<div class="format__table-body format__table-body_shadow">
-					<ul class="format__table-list">
-						{% for li in post.get_field('price_analiz') %}
-							<li class='format__table-list-li {{li.status_max ? "format__table-list-li_#{li.status_max}" : ''}}'>
-								<span class='format__table-list-check {{li.status_max ? "format__table-list-check_#{li.status_max}" : ''}}'></span>
-								<p class="format__table-list-hidden">{{li.status_max ? li.name : ""}}</p>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div class="format__table-footer">
-					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p><span class="format__table-footer-item-span">Продолжительность</span>{{post.get_field('time_maximal')}}</p>
-					</div>
-					<div class="format__table-footer-item format__table-footer-item_shadow">
-						<p><span class="format__table-footer-item-span">Стоимость услуги</span>{{post.get_field('price_maximal')}}</p>
-					</div>
-				</div>
-				<div class="format__table-addition">
-					<button class="btn btn_brand-1 btn_lg effect effect_bounce-top" data-action="modal" data-open="#modal-form" data-type="Анализ гардероба 'Максимальный'">Записаться</button>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    {{siteMacros.titleSection( post.get_field('price_format_title'), 'format__title' )}}
+    <div class="row format__table">
+      <div class="format__table-column format__table-column_1">
+        <p class="format__table-title format__table-title_1 format__table-title_large">Анализ гардероба</p>
+        <div class="format__table-body">
+          <ul class="format__table-list format__table-list_1">
+            {% for li in post.get_field('price_analiz') %}
+              <li class="format__table-list-li">{{li.name}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="format__table-footer format__table-footer_1">
+          <div class="format__table-footer-item format__table-footer-item_height-large format__table-footer-item_1">
+            <p>Продолжительность</p>
+          </div>
+          <div class="format__table-footer-item format__table-footer-item_1">
+            <p>Стоимость услуги</p>
+          </div>
+        </div>
+      </div>
+      <div class="format__table-column">
+        <p class="format__table-title format__table-title_2">Эконом</p>
+        <div class="format__table-body format__table-body_shadow">
+          <ul class="format__table-list">
+            {% for li in post.get_field('price_analiz') %}
+              <li class='format__table-list-li {{li.status_econom ? "format__table-list-li_#{li.status_econom}" : ''}}'>
+                <span class='format__table-list-check {{li.status_econom ? "format__table-list-check_#{li.status_econom}" : ''}}'></span>
+                <p class="format__table-list-hidden">{{li.status_optimal ? li.name : ""}}</p>
+                <p class="format__table-list-content">{{li.text_econom}}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="format__table-footer">
+          <div class="format__table-footer-item format__table-footer-item_height-large format__table-footer-item_shadow">
+            <p><span class="format__table-footer-item-span">Продолжительность</span>{{post.get_field('time_econom')}}</p>
+          </div>
+          <div class="format__table-footer-item format__table-footer-item_shadow">
+            <p><span class="format__table-footer-item-span">Стоимость услуги</span>{{post.get_field('price_econom')}}</p>
+          </div>
+        </div>
+        <div class="format__table-addition">
+          <button class="btn btn_brand-1 btn_lg effect effect_bounce-top" data-action="modal" data-open="#modal-form" data-type="Анализ гардероба 'Эконом'">Записаться</button>
+        </div>
+      </div>
+      <div class="format__table-column">
+        <p class="format__table-title format__table-title_2">Оптимальный</p>
+        <div class="format__table-body format__table-body_shadow">
+          <ul class="format__table-list">
+            {% for li in post.get_field('price_analiz') %}
+              <li class='format__table-list-li {{li.status_optimal ? "format__table-list-li_#{li.status_optimal}" : ''}}'>
+                <span class='format__table-list-check {{li.status_optimal ? "format__table-list-check_#{li.status_optimal}" : ''}}'></span>
+                <p class="format__table-list-hidden">{{li.status_optimal ? li.name : ""}}</p>
+                <p class="format__table-list-content">{{li.text_optimal}}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="format__table-footer">
+          <div class="format__table-footer-item format__table-footer-item_height-large format__table-footer-item_shadow">
+            <p><span class="format__table-footer-item-span">Продолжительность</span>{{post.get_field('time_optimal')}}</p>
+          </div>
+          <div class="format__table-footer-item format__table-footer-item_shadow">
+            <p><span class="format__table-footer-item-span">Стоимость услуги</span>{{post.get_field('price_optimal')}}</p>
+          </div>
+        </div>
+        <div class="format__table-addition">
+          <button class="btn btn_brand-1 btn_lg effect effect_bounce-top" data-action="modal" data-open="#modal-form" data-type="Анализ гардероба 'Оптимальный'">Записаться</button>
+        </div>
+      </div>
+      <div class="format__table-column">
+        <p class="format__table-title format__table-title_3">Максимальный</p>
+        <div class="format__table-body format__table-body_shadow">
+          <ul class="format__table-list">
+            {% for li in post.get_field('price_analiz') %}
+              <li class='format__table-list-li {{li.status_max ? "format__table-list-li_#{li.status_max}" : ''}}'>
+                <span class='format__table-list-check {{li.status_max ? "format__table-list-check_#{li.status_max}" : ''}}'></span>
+                <p class="format__table-list-hidden">{{li.status_max ? li.name : ""}}</p>
+                <p class="format__table-list-content">{{li.text_max}}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="format__table-footer">
+          <div class="format__table-footer-item format__table-footer-item_height-large format__table-footer-item_shadow">
+            <p><span class="format__table-footer-item-span">Продолжительность</span>{{post.get_field('time_maximal')}}</p>
+          </div>
+          <div class="format__table-footer-item format__table-footer-item_shadow">
+            <p><span class="format__table-footer-item-span">Стоимость услуги</span>{{post.get_field('price_maximal')}}</p>
+          </div>
+        </div>
+        <div class="format__table-addition">
+          <button class="btn btn_brand-1 btn_lg effect effect_bounce-top" data-action="modal" data-open="#modal-form" data-type="Анализ гардероба 'Максимальный'">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
