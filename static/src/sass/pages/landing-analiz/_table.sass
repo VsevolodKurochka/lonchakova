@@ -88,7 +88,8 @@
 					text-align: center
 
 			+min(md)
-				min-height: 60px
+				&:not(:last-child)
+					min-height: 60px
 				&:nth-child(4)
 					min-height: 80px
 
@@ -156,6 +157,8 @@
 				height: 65px
 				&_height-large
 					font-size: 13px
+				&_1
+					font-size: 17px
 
 			&-span
 				display: block
