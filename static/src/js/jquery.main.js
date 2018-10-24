@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	if($(window).width() < 768){
+	//if($(window).width() < 768){
 		$('.home-reviews__content').addClass('owl-carousel');
 		$('.home-reviews__content').owlCarousel({
 			loop: true,
@@ -41,7 +41,7 @@ jQuery(document).ready(function($){
 			autoplayTimeout: 3000,
 			autoHeight: true
 		});
-	}
+	//}
 
 	// Tabs
 		$('[data-action="tab"]').click(function(){			
