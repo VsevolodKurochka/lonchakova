@@ -74,7 +74,7 @@ jQuery(document).ready(function($){
 			setTimeout(function(){
 				$('#modal-form-appear').addClass('modal_showing_in');
 				$('body').addClass('modal-open');
-			}, 5000);
+			}, 10000);
 		}
 
 
