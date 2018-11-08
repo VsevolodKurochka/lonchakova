@@ -151,3 +151,39 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro sectionAttention(options) %}
+{% import _self as macros %}
+<section class="section-attention background" style="background-image: url({{options.bg}})">
+  <div class="container">
+    {{macros.titleSection( options.title, 'section-attention__title' )}}
+    <p class="section__subtitle section-attention__subtitle">{{options.subtitle}}</p>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="section-attention__content list list_check">
+          {{options.video_content}}
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="section-attention__pc">
+          <img src="{{options.video_image}}" alt="{{options.title|striptags}}">
+          <button class="btn btn_brand-1 effect effect_bounce-top section-attention__pc-btn" data-action="modal" data-open="#modal-video" data-video="https://www.youtube.com/embed/{{options.video_link}}"></button>
+        </div>
+      </div>
+    </div>
+    <div class="section-attention__footer">
+      {{function('do_shortcode', options.video_shortcode)}}
+    </div>
+  </div>
+</section>
+<div class="modal" id="modal-video">
+  <div class="modal__box modal__box_medium modal__box_transparent">
+    <div class="modal__header">
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <div class="modal__video"></div>
+    </div>
+  </div>
+</div>
+{% endmacro %}

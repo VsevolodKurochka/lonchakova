@@ -59,6 +59,26 @@ jQuery(document).ready(function($){
 		var open = $(this).attr('data-open');
 		$(open).find('form input[name="your-type"]').val(text);
 	});
+
+
+	// Appear modal
+	if($('#modal-form-appear').length > 0){
+		Cookies.set('modal-form-appear', '1', { expires: 2 });
+		$('.modal__footer-close').click(function(){
+			Cookies.set('modal-form-appear', '0', { expires: 2 });
+			$('#modal-form-appear').removeClass('modal_showing_in');
+			$('body').removeClass('modal-open');
+		});
+
+		if(Cookies.get('modal-form-appear') == '1'){
+			setTimeout(function(){
+				$('#modal-form-appear').addClass('modal_showing_in');
+				$('body').addClass('modal-open');
+			}, 5000);
+		}
+
+
+	}
 	
 
 });	
