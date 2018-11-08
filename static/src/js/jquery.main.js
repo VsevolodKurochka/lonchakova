@@ -60,6 +60,12 @@ jQuery(document).ready(function($){
 		$(open).find('form input[name="your-type"]').val(text);
 	});
 
+	$('[data-title]').click(function(){
+		var text = $(this).attr('data-title');
+		var open = $(this).attr('data-open');
+		$(open).find('.modal__title').text(text);
+	});
+
 
 	// Appear modal
 	if($('#modal-form-appear').length > 0){
