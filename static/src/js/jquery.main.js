@@ -77,9 +77,19 @@ jQuery(document).ready(function($){
 		});
 
 		if(Cookies.get('modal-form-appear') == '1'){
+			var allowShow = 0;
+			setInterval(function(){
+				if($('.modal.modal_showing_in').length == 0 ){
+					allowShow = 1;
+				}else{
+					allowShow = 0;
+				}
+			}, 500);
 			setTimeout(function(){
-				$('#modal-form-appear').addClass('modal_showing_in');
-				$('body').addClass('modal-open');
+				if(allowShow){
+					$('#modal-form-appear').addClass('modal_showing_in');
+					$('body').addClass('modal-open');
+				}
 			}, 10000);
 		}
 
