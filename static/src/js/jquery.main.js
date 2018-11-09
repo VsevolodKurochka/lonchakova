@@ -69,7 +69,9 @@ jQuery(document).ready(function($){
 
 	// Appear modal
 	if ($('#modal-form-appear').length > 0) {
-		Cookies.set('modal-form-appear', '1', { expires: 2 });
+		if(Cookies.get('modal-form-appear') == null){
+			Cookies.set('modal-form-appear', '1', { expires: 2 });
+		}
 		$('.modal__footer-close').click(function () {
 			Cookies.set('modal-form-appear', '0', { expires: 2 });
 			$('#modal-form-appear').removeClass('modal_showing_in');
